@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.animal.AddAnimalFragment">
+
+    <!-- Animal Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tx_animal_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_animal_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Animal Name"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Animal Population Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tx_animal_population"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_animal_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_animal_population"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Population"
+            android:textSize="18sp"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tx_image_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_animal_population"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_image_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image URL"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Animal Description Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tx_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_image_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Animal Description"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Add Animal Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_animal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Animal"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_description"
+        style="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

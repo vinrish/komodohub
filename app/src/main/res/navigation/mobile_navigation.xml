@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_animal">
+
+    <fragment
+        android:id="@+id/nav_animal"
+        android:name="org.vinrish.komodohub.ui.animal.AnimalFragment"
+        android:label="Endangered Animals"
+        tools:layout="@layout/fragment_animal" >
+        <action
+            android:id="@+id/action_animalFragment_to_animalDetailFragment"
+            app:destination="@id/animalDetailFragment" />
+        <action
+            android:id="@+id/action_animalFragment_to_addAnimalFragment"
+            app:destination="@id/add_animal" />
+        <action
+            android:id="@+id/action_animalFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalDetailFragment"
+        android:name="org.vinrish.komodohub.ui.animal.AnimalDetailFragment"
+        android:label="Endangered Animal Detail"
+        tools:layout="@layout/fragment_animal_detail" >
+        <argument
+            android:name="animalDocumentId"
+            app:argType="string" />
+        <argument
+            android:name="animalName"
+            app:argType="string" />
+        <argument
+            android:name="animalImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="animalPopulation"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_animalDetailFragment_to_nav_animal"
+            app:destination="@id/nav_animal" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.vinrish.komodohub.ui.LoginFragment"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_loginFragment_to_animalFragment"
+            app:destination="@id/nav_animal" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_animal"
+            app:destination="@id/nav_animal" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="org.vinrish.komodohub.ui.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_animal"
+        android:name="org.vinrish.komodohub.ui.animal.AddAnimalFragment"
+        android:label="Animal Add" >
+        <action
+            android:id="@+id/action_addAnimalFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_add_animal_to_nav_animal"
+            app:destination="@id/nav_animal" />
+    </fragment>
+</navigation>

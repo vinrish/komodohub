@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892201655190",
+    "project_id": "komodo-hub-2a666",
+    "storage_bucket": "komodo-hub-2a666.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892201655190:android:47388d18af6d8f4a955bb7",
+        "android_client_info": {
+          "package_name": "org.vinrish.komodohub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDesnwdgUc9Tao8OJ6UWtVlDJqihf7muQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
